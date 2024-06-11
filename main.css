@@ -2,9 +2,18 @@
 :root {
   /* bg colors */
   --primario: #050505;
+  --secundario: #272d37;
 
   /* Text colors */
-  --text-gray: #115e59;
+  --text-green: #115e59;
+  --text-white: #f3f4f6;
+
+    /* Decoration */
+    --text-1: #200122;
+    --text-2: #6f0000;
+    --text-3: #11998e;
+    --text-4: #38ef7d;
+
 }
 * {
   margin: 0;
@@ -14,7 +23,8 @@
 }
 
 body {
-  background-image: url(./materiales/—Pngtree—futuristic\ shape\ abstract\ background\ chemistry_1250295.jpg);
+ background-image: url(./materiales/—Pngtree—futuristic\ shape\ abstract\ background\ chemistry_1250295.jpg);
+ /*background-color: var(--primario);*/
   font-family: "Poppins", sans-serif;
   display: flex;
   flex-direction: column;
@@ -23,6 +33,12 @@ body {
 /* Header */
 #principal-header {
   background-color: var(--primario);
+  background-color: var(--secondary);
+  background-image: linear-gradient(
+    to bottom,
+    var(--primario),
+    var(--secundario)
+  );
   display: flex;
   align-items: center;
   height: 7vh;
@@ -54,8 +70,10 @@ body {
 }
 
 #principal-header nav a {
-  color: var(--text-gray);
   text-decoration: none;
+  background-image: linear-gradient(to top, var(--text-3), var(--text-4));
+  background-clip: text;
+  color: transparent;
 }
 
 #principal-header form {
@@ -77,3 +95,58 @@ body {
   height: 100%;
   object-fit: cover;
 }
+
+/*main*/
+main {
+  margin-top: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+}
+
+#contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: var(--text-white);
+  width: 50%;
+}
+
+#contenido h1 {
+  background-image: linear-gradient(to top, var(--text-1), var(--text-2));
+  background-clip: text;
+  color: transparent;
+  text-align: left;
+  font-size: 2.5rem;
+}
+
+#contenido a {
+  background-color: var(--primario);
+  color: var(--text-white);
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+}
+
+#carta1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--secundario);
+  border-radius: 1rem;
+}
+
+#carta1 header {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+
